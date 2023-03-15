@@ -76,10 +76,13 @@ export class InMemoryDataService implements InMemoryDbService {
     const individualResources = [
       {
         id: 1,
-        title: "Individual Resource 1",
+        title: "Neurodiversity Network",
+        subtitle: "Neurodivergent Strengths",
         description:
-          "Has ne tritani atomorum conclusionemque, in dolorum volumus cotidieque eum. At vis choro neglegentur iudico",
-        url: "",
+          "This site enables a person to identify which neurodivergent strenghts one\n" +
+          "has and to take an assessment to understand interests and skills. This can\n" +
+          "help identify which careers might work for you.",
+        url: "https://www.neurodiversitynetwork.net/neurodivergent-strengths",
       },
       {
         id: 2,
