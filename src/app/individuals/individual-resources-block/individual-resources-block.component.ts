@@ -8,6 +8,7 @@ export class IndividualResourcesBlockComponent implements OnInit {
   @Input() individualResource: {
     id: number;
     title: string;
+    subtitle: string;
     description: string;
     url: string;
   };
