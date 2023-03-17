@@ -9,6 +9,12 @@
         <h1>{{ individual.header }}</h1>
         <p class="section-subtitle">{{ individual.description }}</p>
       </div>
+
+      <div *ngIf="individualNeurodivergences$">
+        <div *ngFor="let individualNeurodivergence of individualNeurodivergences$ | async; let i = index">
+          <app-individual-neurodivergence-block [individualNeurodivergence]="individualNeurodivergence"></app-individual-neurodivergence-block>
+        </div>
+      </div>
     </div>
 
     <div class="col-3" *ngIf="individualResources$">

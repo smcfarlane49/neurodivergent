@@ -8,12 +8,15 @@ import { ConfigService } from "src/app/shared/services/config.service";
 })
 export class IndividualsPageComponent implements OnInit {
   individuals$: Observable<any> = new Observable();
+
+  individualNeurodivergences$: Observable<any> = new Observable()
   individualResources$: Observable<any> = new Observable();
 
   constructor(private config: ConfigService) {}
 
   ngOnInit(): void {
     this.getPageData("pages", 2);
+    this.getNeurodivergence("individualNeurodivergences")
     this.getBlockData("individualResources");
   }
 
@@ -21,11 +24,11 @@ export class IndividualsPageComponent implements OnInit {
     this.individuals$ = this.config.getSettings(database, id);
   }
 
+  getNeurodivergence(database: string) {
+    this.individualNeurodivergences$ = this.config.getSettings(database);
+  }
+
   getBlockData(database: string) {
-    // this.config.getSettings(database).subscribe((data) => {
-    //   this.features = data;
-    //   console.log("features: ", this.features);
-    // });
     this.individualResources$ = this.config.getSettings(database);
   }
 }

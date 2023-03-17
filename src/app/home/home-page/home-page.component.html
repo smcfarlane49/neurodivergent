@@ -1,16 +1,34 @@
-<div *ngIf="header$ | async as header">
+<div *ngIf="intro$ | async as intro">
   <header>
     <div id="banner-content" class="row clearfix">
       <div class="col-50">
-        <div class="section-heading">
-          <h1>{{ header.tagline }}</h1>
+        <div class="intro">
+          <h1>{{ intro.tagline }}</h1>
+          <h2>
+            {{ intro.paragraph1 }} <br><br>
+            {{ intro.paragraph2 }} <br><br>
+            {{ intro.paragraph3 }} <br><br>
+            {{ intro.paragraph4 }} <br><br>
+            {{ intro.paragraph5 }} <br><br>
+            {{ intro.paragraph6 }} <br><br>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+<div *ngIf="header$ | async as header">
+  <header>
+    <div id="intro-section-content" class="intro-section-row clearfix">
+      <div class="col-50">
+        <div class="intro-section">
+          <h1><a href="{{ header.url }}" target="_blank">
+            {{ header.source }}
+          </a></h1>
           <h2>
             {{ header.paragraph1 }} <br><br>
             {{ header.paragraph2 }} <br><br>
             {{ header.paragraph3 }} <br><br>
-            <a href="{{ header.url }}" target="_blank" class="fa-external-link">
-              {{ header.source }}
-            </a>
           </h2>
         </div>
       </div>
