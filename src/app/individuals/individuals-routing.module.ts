@@ -4,7 +4,7 @@ import { IndividualsPageComponent } from "./individuals-page/individuals-page.co
 
 const routes: Routes = [
   {
-    path: "",
+    path: "individuals",
     component: IndividualsPageComponent,
   },
 ];
